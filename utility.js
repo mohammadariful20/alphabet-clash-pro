@@ -30,3 +30,29 @@ function removeBackgroundClour(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400')
 }
+function scoreUpdate(elementId) {
+     // score update
+     const currentScoreElement=document.getElementById(elementId);
+     const currentScoreValue=currentScoreElement.innerText;
+     let currentScoreNumber=parseInt(currentScoreValue);
+     // set the current scroe 
+     const newScore= currentScoreNumber+1;
+     // set the new score
+     currentScoreElement.innerText=newScore;
+    return currentScoreNumber
+}
+function lifeUpdate(elementId) {
+     // life update
+     const currentScoreElement=document.getElementById(elementId);
+     const currentScoreValue=currentScoreElement.innerText;
+     let currentScoreNumber=parseInt(currentScoreValue);
+     // set the current life 
+     const newLife= currentScoreNumber-1;
+     // set the new life
+     currentScoreElement.innerText=newLife;
+     return newLife;
+}
+function setValueElement(elementId,value) {
+    const element=document.getElementById(elementId);
+    element.innerText=value;
+}
